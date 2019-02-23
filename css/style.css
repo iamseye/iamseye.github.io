@@ -556,7 +556,7 @@ body {
     background-size: cover;
     background-blend-mode: lighten;
     height: 90vh;
-    background-image: linear-gradient(90deg, #c19898 0%, rgba(193, 152, 152, 0.9) 30%, transparent 50%), url(/img/nat-3-large.jpg);
+    background-image: linear-gradient(90deg, #c19898 0%, rgba(193, 152, 152, 0.9) 30%, transparent 50%), url(/img/intro-img.jpg);
     background-position: center;
     position: relative; }
   @media (max-width: 56.25em) {
