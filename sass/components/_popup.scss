@@ -1,0 +1,91 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 9909;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    text-align: center;
+    
+    &__content {
+        @include absCenter;
+
+        width: 75%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        border-radius: 3px;
+        overflow: hidden;
+        padding: 2rem;
+
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.2);
+        transition: all .4s .2s;
+
+        @include respond(phone) {
+
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+    }
+
+    ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+            padding: 1rem;
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-light-2;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin: 2rem;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        text-align: left;
+
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+
+    // open status
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark-1;
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
