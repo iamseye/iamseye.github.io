@@ -14,11 +14,15 @@
     transition: all .2s;
 
     @include respond(phone) {
-        height: 6vh;    
+        height: 8vh;    
     }
 
     &__logo-box {
         margin-left: 4rem;
+
+        @include respond(phone) {
+            margin-left: 1rem;
+        }
     }
 
     &__logo {  
@@ -34,8 +38,8 @@
         margin-right: $body-padding;
 
         @include respond(phone) {
-            margin-right: 0;
-            font-size: 1.3rem;
+            margin-right: 1rem;
+            font-size: 1.4rem;
         }
         
         ul {

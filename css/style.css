@@ -106,7 +106,9 @@ body {
   @media (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2rem;
-      letter-spacing: 1rem; } }
+      letter-spacing: 1rem;
+      margin-top: 2rem;
+      width: 75%; } }
 
 .heading__bottom-line {
   border-bottom: 1px solid #c19898;
@@ -258,6 +260,7 @@ body {
       @media (max-width: 56.25em) {
         .composition__photo--p2 {
           top: -1rem;
+          left: 1rem;
           transform: scale(1.3);
           z-index: 100; } }
     .composition__photo--p3 {
@@ -265,8 +268,8 @@ body {
       top: 20rem; }
       @media (max-width: 56.25em) {
         .composition__photo--p3 {
-          top: 1rem;
-          left: 0;
+          top: -1rem;
+          left: 2rem;
           transform: scale(1.1); } }
     .composition__photo:hover {
       transform: scale(1.05) translateY(-0.5rem);
@@ -513,9 +516,12 @@ body {
   transition: all .2s; }
   @media (max-width: 37.5em) {
     .header {
-      height: 6vh; } }
+      height: 8vh; } }
   .header__logo-box {
     margin-left: 4rem; }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        margin-left: 1rem; } }
   .header__logo {
     height: 7rem; }
     @media (max-width: 37.5em) {
@@ -526,8 +532,8 @@ body {
     margin-right: 6rem; }
     @media (max-width: 37.5em) {
       .header__menu {
-        margin-right: 0;
-        font-size: 1.3rem; } }
+        margin-right: 1rem;
+        font-size: 1.4rem; } }
     .header__menu ul {
       list-style: none;
       margin: 0 auto; }
@@ -559,9 +565,9 @@ body {
     background-image: linear-gradient(90deg, #c19898 0%, rgba(193, 152, 152, 0.9) 30%, transparent 50%), url(/img/intro-img.jpg);
     background-position: center;
     position: relative; }
-  @media (max-width: 56.25em) {
-    .section-intro {
-      background-image: linear-gradient(90deg, #c19898 0%, rgba(193, 152, 152, 0.9) 35%, transparent 60%), url(/img/nat-3-large.jpg); } }
+    @media (max-width: 56.25em) {
+      .section-intro__picture {
+        background-image: linear-gradient(90deg, #c19898 0%, rgba(193, 152, 152, 0.9) 35%, transparent 90%), url(/img/intro-img.jpg); } }
 
 .section-about {
   padding: 10rem 10rem; }
